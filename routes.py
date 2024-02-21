@@ -1,7 +1,7 @@
 from flask import render_template
 from requests import get
 
-from Models import Payload
+from Models import Payload,flood_reading
 
 from __main__ import app
 
@@ -11,10 +11,11 @@ def floodings(methods=["POST","GET"]):
     data = Payload(response.content)
     #this is an object storing all of the API readings :)
 
-    location_names = []
+    readings = []
     for location in data.items:
-        location_names.append(location["eaAreaName"])
+        readings.append(flood_reading(location["eaAreaName"],location["severity"],
+                                      location["message"]))
 
     
 
-    return render_template('Floodings.html',location_names=location_names)
+    return render_template('Floodings.html',readings=readings)

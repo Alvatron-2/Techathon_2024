@@ -3,12 +3,12 @@
 
 .reading_container {
     display: grid; 
-    grid-template-columns: 200px 120px; 
+    grid-template-columns: 200px 120px 400px; 
     grid-template-rows: 120px 80px; 
     gap: 0px 0px; 
     grid-template-areas: 
-      "icon" "title"
-      "icon" "reading";
+      "icon" "title" "message"
+      "icon" "subtitle" "message";
 }
 
 .reading_container > div {
@@ -23,8 +23,31 @@
 
 .reading_container-title_holder {
     font-family: "Arial";
-    grid-area: "icon";
+    font-style:bold;
+    font-size:40px;
+    grid-area: "title";
+    height:100px;
+    width: 300px;
+    padding:10px;
+}
+
+.reading_container-subtitle_holder {
+    font-family: "Arial";
+    font-style:bold;
+    font-size:20px;
+    grid-area: "subtitle";
+    color:brown;
     height:60px;
-    width: 200px;
+    width: 300px;
+    padding:10px;
+}
+
+.reading_container-message_holder {
+    font-family: "Arial";
+    font-style:bold;
+    font-size:20px;
+    grid-area: "message";
+    height:200px;
+    width: 400px;
     padding:10px;
 }

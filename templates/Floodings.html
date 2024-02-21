@@ -2,9 +2,11 @@
     <link rel="stylesheet" href="static/Homepage_CSS.css">
 </head>
 
-{%for name in location_names%}
+{%for reading in readings%}
 <div class="reading_container">
-    <div class="reading_container-icon">{{name}}</div>
-    <div class="reading_container-title_holder">{{name}}</div>
+    <div class="reading_container-icon">{{reading.title}}</div>
+    <div class="reading_container-title_holder">{{reading.title}}</div>
+    <div class="reading_container-subtitle_holder">{{reading.subtitle}}</div>
+    <div class="reading_container-message_holder">{{reading.message}}</div>
 </div>
 {%endfor%}
