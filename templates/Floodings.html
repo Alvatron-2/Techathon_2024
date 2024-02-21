@@ -2,6 +2,13 @@
     <link rel="stylesheet" href="static/Homepage_CSS.css">
 </head>
 
+<p>Filter by Area:</p>
+<select name="areas" id="areas">
+    {%for area in locations_unique%}
+
+    <option value="volvo">Volvo</option>
+  </select>
+
 {%for reading in readings%}
 <div class="reading_container">
     <div class="reading_container-icon">{{reading.title}}</div>
