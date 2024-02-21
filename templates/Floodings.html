@@ -5,8 +5,8 @@
 <p>Filter by Area:</p>
 <select name="areas" id="areas">
     {%for area in locations_unique%}
-
-    <option value="volvo">Volvo</option>
+    <option value={{area}}>{{area}}</option>
+    {%endfor%}
   </select>
 
 {%for reading in readings%}

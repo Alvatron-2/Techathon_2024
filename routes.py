@@ -21,6 +21,8 @@ def floodings(methods=["POST","GET"]):
     for location in data.items:
         if location["eaAreaName"] not in locations_unique:
             locations_unique.append(location["eaAreaName"])
+            
+    locations_unique = locations_unique.sort()
     
 
     return render_template('Floodings.html',readings=readings,
