@@ -1,7 +1,10 @@
 <head>
-    <link rel="stylesheet" href="Homepage_CSS.css">
+    <link rel="stylesheet" href="static/Homepage_CSS.css">
 </head>
 
 {%for name in location_names%}
-<p>{{name}}</p>
+<div class="reading_container">
+    <div class="reading_container-icon">{{name}}</div>
+    <div class="reading_container-title_holder">{{name}}</div>
+</div>
 {%endfor%}
