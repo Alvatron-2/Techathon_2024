@@ -13,8 +13,6 @@
 
 .reading_container > div {
     background-color: rgb(173, 207, 184);
-    border-color:rgb(37, 52, 53);
-    border-width:5px;
 }
 
 .reading_container-icon_holder {
@@ -24,6 +22,7 @@
 }
 
 .reading_container-title_holder {
+    font-family: "Arial";
     grid-area: "icon";
     height:60px;
     width: 200px;
