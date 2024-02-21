@@ -1,13 +1,26 @@
+{% extends "Base.html" %}
+
 <head>
     <link rel="stylesheet" href="static/Homepage_CSS.css">
 </head>
 
+{% block content %}
+
+
+<script lang="javaScript">
+    function  RedirectbyArea(area_selected){
+        window.document.location="/floodings/"+area_selected.value;
+
+    }
+</script>
+
+    
 <p>Filter by Area:</p>
-<select name="areas" id="areas">
+<select name="areas" id="areas" onchange="RedirectbyArea(this)">
     {%for area in locations_unique%}
     <option value={{area}}>{{area}}</option>
     {%endfor%}
-  </select>
+</select>
 
 {%for reading in readings%}
 <div class="reading_container">
@@ -17,3 +30,5 @@
     <div class="reading_container-message_holder">{{reading.message}}</div>
 </div>
 {%endfor%}
+
+{% endblock content %}
