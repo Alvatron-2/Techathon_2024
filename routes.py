@@ -5,6 +5,10 @@ from Models import Payload,flood_reading
 
 from __main__ import app
 
+@app.route('/')
+def homepage(methods=["GET"]):
+    
+    return render_template('homepage.html')
 
 @app.route('/floodings')
 def floodings(methods=["POST","GET"]):
