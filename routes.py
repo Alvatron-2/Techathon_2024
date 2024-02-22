@@ -7,8 +7,15 @@ from __main__ import app
 
 @app.route('/')
 def homepage(methods=["GET"]):
+
     
     return render_template('homepage.html')
+
+@app.route('/sensors')
+def sensors(methods=["GET"]):
+
+    
+    return render_template('Sensor.html')
 
 @app.route('/floodings')
 def floodings(methods=["POST","GET"]):

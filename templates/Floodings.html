@@ -6,10 +6,14 @@
 
 {% block content %}
 
+<head>
+    <link rel="stylesheet" href="static/Homepage_CSS.css">
+</head>
 
 <script lang="javaScript">
     function  RedirectbyArea(area_selected){
-        window.document.location="/floodings/"+area_selected.value;
+        console.log(area_selected.value,area_selected.value.replace(" ","%20"))
+        window.document.location="/floodings/"+area_selected.value.replace(" ","%20");
 
     }
 </script>
